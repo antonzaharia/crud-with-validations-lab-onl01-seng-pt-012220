@@ -3,8 +3,7 @@ class Song < ActiveRecord::Base
   validates :title, presence: true
   validates :artist_name, presence: true
   validate :no_repeated_title
-  validates :release_year, presence: true,
-      if: :released?
+  validates :release_year, presence: true, if: :released?
   validate :date_not_possible
 
   def no_repeated_title
