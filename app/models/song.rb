@@ -7,7 +7,7 @@ class Song < ActiveRecord::Base
   validate :date_not_possible
 
   def no_repeated_title
-    if Song.any?{ |s| s.title == title && s.artist_name == artist_name && s.release_year == release_year}
+    if Song.any?{ |s| s.title == title && s.artist_name == artist_name && s.release_year == release_year }
   end
 
   def date_not_possible
