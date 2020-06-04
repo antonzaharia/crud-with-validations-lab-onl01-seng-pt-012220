@@ -1,2 +1,2 @@
-class Song < ActiveModel::Base
+class Song < ActiveRecord::Base
 end
