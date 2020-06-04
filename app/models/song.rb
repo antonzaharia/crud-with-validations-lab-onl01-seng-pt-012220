@@ -8,6 +8,7 @@ class Song < ActiveRecord::Base
 
   def no_repeated_title
     if Song.any?{ |s| s.title == title && s.artist_name == artist_name && s.release_year == release_year }
+      errors.add( :title, "can't add the same song twice")
   end
 
   def date_not_possible
